@@ -6,6 +6,7 @@ import { LoginComponent } from './feature/pages/login/login.component';
 import { FullWidthLayoutComponent } from './layout/full-width-layout/full-width-layout.component';
 import { SplashComponent } from './feature/pages/splash/splash.component';
 import { HomeComponent } from './feature/pages/home/home.component';
+import { ContentMarginLayoutComponent } from './layout/content-margin-layout/content-margin-layout.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent },
@@ -21,7 +22,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: FullWidthLayoutComponent,
+    component: ContentMarginLayoutComponent,
     children: [{ path: 'home', component: HomeComponent }],
   },
 ];
