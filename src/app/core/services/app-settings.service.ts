@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { AppConfig } from '../models/helper/appconfig';
+import { AppSettings } from '../models/helper/appsettings';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AppSettingsService {
-  static appSettings: AppConfig;
+  static appSettings: AppSettings;
 
   constructor(private http: HttpClient) {}
 
@@ -16,7 +16,7 @@ export class AppSettingsService {
 
     return this.http.get(jsonFile).pipe(
       tap(appSettings => {
-        AppSettingsService.appSettings = (appSettings as AppConfig);
+        AppSettingsService.appSettings = (appSettings as AppSettings);
       })
     );
   }
