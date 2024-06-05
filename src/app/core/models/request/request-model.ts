@@ -1,3 +1,3 @@
-class RequestModel {
+export interface RequestModel {
     
 }

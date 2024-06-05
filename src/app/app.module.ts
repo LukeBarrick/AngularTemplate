@@ -8,19 +8,17 @@ import { CoreModule } from './core/core.module';
 import { FeatureModule } from './feature/feature.module';
 import { SharedModule } from './shared/shared.module';
 import { LayoutModule } from './layout/layout.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
     CoreModule,
     FeatureModule,
-    SharedModule,
-    LayoutModule
+    LayoutModule,
+    SharedModule.forRoot()
   ],
   providers: [
     provideClientHydration()

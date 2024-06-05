@@ -1,3 +1,3 @@
-class ResponseModel {
+export interface ResponseModel {
 
 }
